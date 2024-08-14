@@ -4,28 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grupo 5</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/main.css">
     <title>Document</title>
 </head>
 <body>
-    <header>
-        <h1>Grupo 5</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="blogMarti.html">Blog de Martina</a></li>
-                <li><a href="blogNico.html">Blog de Nicolás</a></li>
-                <li><a href="aboutus.html">Sobre nosotros</a></li>
-            </ul>
-        </nav>
-    </header>
+    <div class="wrapper">
+        <header class="header">
+            <h1>Grupo 5</h1>
+            <nav>
+                <button id="home" onclick="location.href='main.html'">Home</button>
+                <button id="blog-button" onclick="location.href='blog.html'">Blog</button>
+                <button id="about-button" onclick="location.href='aboutus.html'">About us</button>
+            </nav>
+        </header>
+        <article class="main">
+            <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum
+                tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas
+                semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+        </article>
+    </div>
     
-    <main>
-        <h2> jasbcbejkbvkjzbdb</h2>
-        <p> Acá va alguna descripción</p>
-    </main>
-    <footer>
-        <p>&copy; Acá simulamos que este blog tiene derechos de autor jaja</p>
-    </footer>
+    <footer class="footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
 </body>
 </html>

@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Blog de Grupo 5">
-    <meta font="author" content="Grupo 5">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display"
-    rel="stylesheet"
-    type="text/css" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
     <title>Grupo 5</title>
+    <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
-    <h1>Bienvenidos a nuestro blog</h1>
-    <p> Bueno en esta pagina no sé je</p>
+    <header>
+        <h1>Grupo 5</h1>
+        <nav>
+            <button id="home" onclick="location.href='main.html'">Home</button>
+            <button id="blog-button" onclick="location.href='blog.html'">Blog</button>
+            <button id="about-button" onclick="location.href='aboutus.html'">About us</button>
+        </nav>
+    </header>
+    <article class="main">
+        <h2>Blog</h2>
+        <p>En este blog vamos a hablar de cosas interesantes</p>
+        <h3>Primer post</h3>
+        <p>Este es el primer post del blog</p>
+        <button id="blog-nico" onclick="location.href='blogNico.html'">¿Conocías estás palabras?</button>
+
+        <h3>Segundo post</h3>
+        <p>Este es el segundo post del blog</p>
+    </article>
 </body>
 </html>
