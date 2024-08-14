@@ -55,7 +55,7 @@ nav button:hover {
 }
 
 /* Estilos del pie de página*/
-.footer {
+.main-footer {
     background: #333;
     color: #fff;
     text-align: center;
@@ -64,7 +64,6 @@ nav button:hover {
     bottom: 0;
     width: 100%;
 }
-
 
 /* Responsive design */
 @media (max-width: 600px) {
@@ -99,4 +98,38 @@ nav button:hover {
     td {
         padding: 8px;
     }
+}
+
+
+
+/* Estilos de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos del pie de página */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
 }
