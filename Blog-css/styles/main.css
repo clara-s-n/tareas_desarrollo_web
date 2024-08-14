@@ -7,42 +7,76 @@ body {
     background-color: #f4f4f4;
 }
 
+/* Scroll bar estilizada */
+body::-webkit-scrollbar{
+    width: 0.25rem;   
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(153, 198, 213);
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #333;
+}
+
+/* Menu de desplazamiento entre paginas */
+.navbar{
+    position: fixed;
+    background-color:  rgb(153, 198, 213);
+    transition: width 200ms ease;
+}
+
+.navbar:hover .navbar-nav{
+    display: flex;
+    align-items: start;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #562155;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+}
+
+.fa-primary{
+    color: #562155;
+}
+
+.link-text{
+    display: none;
+}
+
+.nav-link svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover .nav-link span{
+    white-space: nowrap;
+}
+
 .wrapper {
     width: 80%;
     margin: auto;
     overflow: hidden;
     padding: 20px;
-}
-
-/* Estilos del encabezado */
-.header {
-    background: rgb(153, 198, 213);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-}
-
-.header h1 {
-    margin: 0;
-    padding-bottom: 10px;
-}
-
-nav {
-    margin-top: 10px;
-}
-
-nav button {
-    background: #444;
-    color: #fff;
-    border: none;
-    padding: 10px 15px;
-    margin: 0 5px;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-nav button:hover {
-    background: #555;
 }
 
 /* Estilos del contenido principal */
@@ -66,15 +100,48 @@ nav button:hover {
 }
 
 /* Responsive design */
-@media (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .wrapper {
         width: 95%;
     }
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
 
-    nav button {
-        display: block;
-        width: 100%;
-        margin: 5px 0;
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .footer{
+        margin-bottom: 5rem;
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover{
+        width: 11rem;
+    }
+
+    .navbar:hover .link-text{
+        display: inline;
+        font-weight: bold;
     }
 }
 
@@ -83,13 +150,6 @@ nav button:hover {
     .wrapper {
         padding: 10px;
     }
-
-    nav button {
-        display: block;
-        width: 100%;
-        margin: 5px 0;
-    }
-
     table {
         font-size: 14px;
     }
