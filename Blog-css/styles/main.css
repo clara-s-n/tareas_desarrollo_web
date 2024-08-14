@@ -1,0 +1,195 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Scroll bar estilizada */
+body::-webkit-scrollbar{
+    width: 0.25rem;   
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(153, 198, 213);
+}
+
+body::-webkit-scrollbar-track{
+    background-color: #333;
+}
+
+/* Menu de desplazamiento entre paginas */
+.navbar{
+    position: fixed;
+    background-color:  rgb(153, 198, 213);
+    transition: width 200ms ease;
+}
+
+.navbar:hover .navbar-nav{
+    display: flex;
+    align-items: start;
+}
+
+.navbar-nav{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: #562155;
+    text-decoration: none;
+    filter: grayscale(100%) opacity(0.7);
+    transition: 600ms;
+}
+
+.nav-link:hover{
+    filter: grayscale(0%) opacity(1);
+}
+
+.fa-primary{
+    color: #562155;
+}
+
+.link-text{
+    display: none;
+}
+
+.nav-link svg{
+    min-width: 2rem;
+    margin: 0 1.5rem;
+}
+
+.navbar:hover .nav-link span{
+    white-space: nowrap;
+}
+
+.wrapper {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+}
+
+/* Estilos del contenido principal */
+.main {
+    background: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos del pie de página*/
+.main-footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    .wrapper {
+        width: 95%;
+    }
+    .navbar {
+        bottom: 0;
+        width: 100vw;
+        height: 5rem;
+    }
+
+    .navbar-nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .nav-link {
+        justify-content: center;
+    }
+
+    .footer{
+        margin-bottom: 5rem;
+    }
+
+    main {
+        margin: 0;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .navbar {
+        top: 0;
+        width: 5rem;
+        height: 100vh;
+    }
+
+    .navbar:hover{
+        width: 11rem;
+    }
+
+    .navbar:hover .link-text{
+        display: inline;
+        font-weight: bold;
+    }
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .wrapper {
+        padding: 10px;
+    }
+    table {
+        font-size: 14px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+    }
+}
+
+
+
+/* Estilos de las tablas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table,
+th,
+td {
+    border: 1px solid #ddd;
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+/* Estilos del pie de página */
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    margin-top: 20px;
+}
