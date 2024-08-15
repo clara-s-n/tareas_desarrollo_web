@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/main.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/blogNico.css">
+    <title>¿Conocias estas palabras?</title>
 </head>
 <body>
     <nav class="navbar">
@@ -39,27 +40,105 @@
         </ul>
     </nav>
         <!-- Sección de Nico-->
-        <h2>¿Conocías estas palabras?</h2>
-        <p>Para esta sección voy a seleccionar una variedad de palabras extrañas que quizas no conocias</p>
-        <dl>
-            <dt><strong><i>Isagoge</i></strong></dt>
-            <dd>
-                Introducción, preámbulo.
-            </dd>
-            <dt><strong><i>Sacamantecas</i></strong></dt>
-            <dd>
-                Aunque ‘sacamantecas’ pueda parecer una palabra que haga referencia a algún utensilio de cocina,
-                lo cierto es que su significado está muy alejado de ello. De hecho, según la RAE, ‘sacamantecas’
-                hace referencia al criminal que abre el cuerpo de sus víctimas para sacarles las vísceras.
-            </dd>
-            <dt><strong><i>Jerapellina</i></strong></dt>
-            <dd>
-                Vestido viejo y andrajoso, pieza de tela que no puede dar más de sí.
-            </dd>
-        </dl>
-        <p>Todas estas <strike>palabras</strike> son reales y pueden ser verificadas por la RAE</p>
-        <p>by <strong>Nicolás Márquez</strong></p><br>
-
+    <div class="wrapper">
+        <main class="main">
+            <h1>¿Conocías estas palabras?</h1>
+            <article id="introduction">
+                <p>
+                    Para esta sección voy a seleccionar una variedad de palabras
+                    extrañas que quizas no conocias. Al final encontraras una serie de
+                    cajas que podrás marcar si ya conocías alguna de las palabras.
+                </p>
+                <img id='nerd-emoji' src="https://cue-equitytools.usc.edu/assets/emoji/animations/interested-cebecf3f3510bf7100e2704b543960ab1859b37386339dc72d0956f070931f32.gif" alt="nerd-emoji">
+            </article>
+            <dl>
+                <div class="box">
+                    <dt>Isagoge</dt>
+                    <dd>
+                        Introducción, preámbulo.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Sacamantecas</dt>
+                    <dd>
+                        Aunque ‘sacamantecas’ pueda parecer una palabra que haga referencia a algún utensilio de cocina,
+                        lo cierto es que su significado está muy alejado de ello. De hecho, según la RAE, ‘sacamantecas’
+                        hace referencia al criminal que abre el cuerpo de sus víctimas para sacarles las vísceras.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Jerapellina</dt>
+                    <dd>
+                        Vestido viejo y andrajoso, pieza de tela que no puede dar más de sí.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Berceuse</dt>
+                    <dd>
+                        Composición musical al estilo de las canciones de cuna.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Veragua</dt>
+                    <dd>
+                        Moho que se forma en la ropa húmeda que no se tiende o no se ventila.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Farmacopea</dt>
+                    <dd>
+                        Repertorio o libro de recetas medicinales, pudiendo ser éstas tanto fármacos como fitoterapéuticas.
+                    </dd>
+                </div>
+                <div class="box">
+                    <dt>Limerencia</dt>
+                    <dd>
+                        Locura de amor. Estado mental involuntario en el que la atracción de un persona hacia la otra le impide pensar de forma racional.
+                    </dd>
+                </div>
+            </dl>
+            <p>Todas estas palabras son reales y pueden ser verificadas por la RAE. Ahora bien, cuentame ¿Conocias alguna de estas palabras?</p>
+            
+            <div class="encuesta">
+                <ul>
+                    <li>
+                        <p>Isagoge</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Sacamantecas</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Jerapellina</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Berceuse</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Veragua</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Farmacopea</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <p>Limerencia</p>
+                        <input type="checkbox">
+                    </li>
+                    <li>
+                        <a id="boton-enviar" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Enviar</a>
+                    </li>
+                </ul>
+            </div>
+            
+            
+            <p>by <strong>Nicolás Márquez</strong></p><br>
+        </main>
         <footer class="footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
+    </div>     
 </body>
 </html>
