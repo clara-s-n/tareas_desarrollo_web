@@ -20,3 +20,10 @@
     background-color: rgb(243, 210, 248);
     padding: 1em;
 }
+
+/*Estilo de footer de un articulo*/
+article>footer {
+    padding: 1em;
+    margin-top: 1em;
+    position: inherit;
+}

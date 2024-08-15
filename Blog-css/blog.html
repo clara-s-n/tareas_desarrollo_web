@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="description" content="Blog de Grupo 5">
-    <title>Grupo 5</title>
+    <title>Blog</title>
     <link rel="stylesheet" href="styles/main.css">
 </head>
 <body>
+    <header>
+        <h1>Grupo 5</h1>
+    </header>
     <nav class="navbar">
         <ul class="navbar-nav">
             <li class="nav-item">
@@ -38,13 +41,11 @@
     <div class="wrapper">
         <article class="main">
             <h1>Publicaciones disponibles:</h1>
-            <ul>
-                <li><a href="blogNico.html">¿Conocías estas palabras?</a></li>
-                <li><a href="blogAna.html">Who's Taylor Swift anyway?</a></li>
-                <li><a href="blogMarti.html">Mis cinco trucos para mantener la motivación</a></li>
-            </ul>
+            <button onclick="window.location.href='blogNico.html'">Palabras extrañas</button>
+            <button onclick="window.location.href='blogAna.html'">Taylor Swift</button>
+            <button onclick="window.location.href='blogMarti.html'">5 trucos para mantener la motivación</button>
         </article>
-        <footer class="footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
+        <footer class="main-footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
     </div>
 </body>
 </html>

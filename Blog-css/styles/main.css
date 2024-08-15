@@ -195,3 +195,33 @@ th {
     padding: 10px;
     margin-top: 20px;
 }
+
+/*Estilo del header*/
+header {
+    background-color: #b1e9ff63;
+    border-bottom: 1px solid #eaeaea;
+    margin-bottom: 1em;
+    text-align: right;
+    padding: 1em;
+
+}
+
+header h1 {
+    font-size: 1.5em;
+    margin: 0;
+}
+
+/*Estilo de los botones*/
+button {
+    background-color: #562155;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #562155;
+    color: white;
+}
