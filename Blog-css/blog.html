@@ -5,6 +5,7 @@
     <meta name="description" content="Blog de Grupo 5">
     <title>Blog</title>
     <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/blog.css">
 </head>
 <body>
     <header>
@@ -41,11 +42,22 @@
     <div class="wrapper">
         <article class="main">
             <h1>Publicaciones disponibles:</h1>
-            <button onclick="window.location.href='blogNico.html'">Palabras extrañas</button>
-            <button onclick="window.location.href='blogAna.html'">Taylor Swift</button>
-            <button onclick="window.location.href='blogMarti.html'">5 trucos para mantener la motivación</button>
+            <div class="publication-grid">
+                <a href="blogNico.html" class="publication-item">
+                    <img src="https://pymstatic.com/58284/conversions/palabras-mas-raras-en-espanol-small-16_9.jpg" alt="Biblioteca">
+                    <span>Palabras extrañas</span>
+                </a>
+                <a href="blogAna.html" class="publication-item">
+                    <img src="https://66.media.tumblr.com/deb7c62e7855a4cf0eb556ab5422ced8/1457e449bbc2684e-87/s500x750/bf89805ae87ecc17638c71c1b13eec9a44cb5361.gif" alt="Taylor Swift">
+                    <span>Taylor Swift</span>
+                </a>
+                <a href="blogMarti.html" class="publication-item">
+                    <img src="https://knowledgeone.ca/wp-content/uploads/2019/10/motivation_oct2019.jpg" alt="Trucos de motivación">
+                    <span>5 trucos para mantener la motivación</span>
+                </a>
+            </div>
         </article>
-        <footer class="main-footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
+        <footer class="footer">&copy; Acá simulamos que este blog tiene derechos de autor jaja</footer>
     </div>
 </body>
 </html>
