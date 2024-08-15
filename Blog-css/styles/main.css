@@ -65,7 +65,18 @@ body::-webkit-scrollbar-track {
     display: none;
 }
 
-.nav-link svg {
+.navbar img {
+    max-width: 5rem;
+    margin: 0 1.5rem;
+}
+
+.navbar .nav-footer {
+    position: fixed;
+    bottom: 0;
+    text-align: center;
+}
+
+.navbar .nav-link svg {
     min-width: 2rem;
     margin: 0 1.5rem;
 }
@@ -205,13 +216,13 @@ header {
     margin-bottom: 1em;
     text-align: right;
     padding: 1em;
-
 }
 
 header h1 {
     font-family: 'Oswald', sans-serif;
     font-size: 1.5em;
     margin: 0;
+    justify-content: center;
 }
 
 /*Estilo de los botones*/
@@ -229,6 +240,21 @@ button:hover {
     color: white;
 }
 
-.titulito{
+.titulito {
     text-align: center;
+}
+
+.box iframe {
+    width: 70%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Content */
+.content {
+    padding: 20px;
 }
