@@ -51,6 +51,8 @@ body {
     color: #333;
 }
 
-h2 {
-    color: #32012e;
+.divider {
+    background-color: #5c3d0b4f;
+    color: rgb(82, 36, 1);
+    padding: 10px;
 }

@@ -27,3 +27,7 @@ article>footer {
     margin-top: 1em;
     position: inherit;
 }
+
+.first {
+    color: rgb(132, 13, 11)
+}
