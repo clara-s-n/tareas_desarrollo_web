@@ -1,0 +1,17 @@
+.box {
+    position: relative; /* Permite posicionar el contenido relativo a este contenedor */
+    width: 30%; /* Ajusta el ancho del contenedor para adaptarse a la imagen */
+    float: right; /* Mueve la caja hacia la derecha */
+    margin: 0 auto; /* Centra verticalmente si es necesario */
+    transform: translateY(34%); /* Mueve la imagen hacia abajo para que esté a la mitad de la página */
+}
+
+img {
+    display: block;
+    max-width: 100%; /* Asegura que la imagen no se desborde del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+}
+
+.primertitulo{
+    text-align: center;
+}
