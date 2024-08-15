@@ -1,0 +1,56 @@
+.box {
+    position: relative; 
+    width: 30%; 
+    float: right; 
+    margin: 0 auto; 
+    transform: translateY(34%); 
+}
+
+img {
+    display: block;
+    max-width: 100%; 
+    height: auto; 
+}
+
+.primertitulo{
+    color: white;
+    text-align: center;
+    padding: 10px; /* Añade un poco de espacio entre el borde y el contenido */
+    border-radius: 5px; 
+    background-color: rgb(153, 198, 213);
+}
+
+h4{
+    color: #80b6ccfb;
+}
+
+@keyframes colorChange {
+    0% { color: rgb(255, 0, 0); }
+    25% { color: rgb(0, 255, 0); }
+    50% { color: rgb(0, 0, 255); }
+    75% { color: rgb(255, 255, 0); }
+    100% { color: rgb(255, 0, 0); }
+}
+
+.colorrgb {
+    animation: colorChange 5s infinite;
+}
+
+/* Ajuste de márgenes y padding para h4 y listas */
+h4, ul, ol, p {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    padding: 0;
+    font-size: 1em;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
+ul li:hover, ol li:hover {
+    color: #80b6ccfb; 
+    cursor: pointer; 
+}
