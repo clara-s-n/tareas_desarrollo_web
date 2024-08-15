@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+
+h1 {
+    font-family: 'Oswald', sans-serif;
+}
+
+dt {
+    font-family: 'Oswald', sans-serif;
+    font-size: large;
+    font-weight: bold;
+}
+
+dl {
+    background: rgb(153, 198, 213);
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+#introduction{
+    display: flex;
+}
+#nerd-emoji {
+    width: 8rem;
+    height: 8rem;
+}
+
+.box {
+    border-radius: 10px;
+    width: auto;
+    height: auto;
+    transition: width 200ms ease;
+}
+
+.box:hover{
+    background-color: #562155;
+    color: white;
+    transition: 500ms;
+}
+
+.encuesta {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Oswald';
+}
+
+.encuesta ul {
+    list-style: none;
+}
+
+.encuesta ul li {
+    display: flex;
+}
+
+.encuesta ul a {
+    border-radius: 10px;
+    text-align: center;
+    width: 5rem;
+    height: 2rem;
+    text-decoration: none;
+    background-color: #562155;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+
+input[type='checkbox'] {
+    width: 1rem;
+    accent-color: #562155;
+}
+
+input[type='checkbox']:hover {
+    accent-color: #562155;
+}
