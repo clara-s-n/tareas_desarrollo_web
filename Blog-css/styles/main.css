@@ -140,6 +140,11 @@ body::-webkit-scrollbar-track {
     main {
         margin: 0;
     }
+
+    .nav-footer {
+        position: fixed;
+        left: 0;
+    }
 }
 
 @media only screen and (min-width: 600px) {
