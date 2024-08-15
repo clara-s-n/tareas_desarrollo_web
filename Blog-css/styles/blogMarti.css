@@ -15,3 +15,18 @@ img {
 .primertitulo{
     text-align: center;
 }
+
+/* Ajuste de márgenes y padding para h4 y listas */
+h4, ul, ol, p {
+    margin-left: 20px; 
+    margin-right: 20px; 
+    margin-top: 10px;
+    margin-bottom: 20px; 
+    padding: 0;
+    font-size: 1em;
+}
+
+ul, ol {
+    list-style-position: inside;
+}
+
