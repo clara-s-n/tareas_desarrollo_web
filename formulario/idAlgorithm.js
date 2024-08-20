@@ -9,26 +9,26 @@ function veryfingDigit(id) {
         let s = 0;
 
         // Predefined values
-        const valores = [4, 3, 6, 7, 8, 9, 2];
+        const values = [4, 3, 6, 7, 8, 9, 2];
 
         // Number of elements
-        const largo = x.length;
+        const length = x.length;
 
-        for (let i = 0; i < largo; i++) {
+        for (let i = 0; i < length; i++) {
             // Multiply each value at position i of the ID list with
             // the corresponding value at the same position in the predefined value list
-            const c1 = x[i] * valores[i];
+            const c1 = x[i] * values[i];
             s += c1;
         }
 
         // Calculation of the verification digit
-        const resto = s % 10;
-        let dv = resto === 0 ? 0 : 10 - resto;
+        const rest = s % 10;
+        let dv = rest === 0 ? 0 : 10 - rest;
+        return dv;
     } else {
         dv = -1;
+        return dv;
     }
-
-    return dv;
 }
 
 function isValid(veryfingDigit) {
