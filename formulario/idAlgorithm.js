@@ -1,36 +1,31 @@
-function veryfingDigit(id) {
-    // Transform the ID number into an integer
-    const y = parseInt(id);
-
-    if (y >= 100000 && y <= 9999999) {
-        // Convert each element of the string into an integer
-        const x = Array.from(id, Number).reverse();
-
-        let s = 0;
-
-        // Predefined values
-        const values = [4, 3, 6, 7, 8, 9, 2];
-
-        // Number of elements
-        const length = x.length;
-
-        for (let i = 0; i < length; i++) {
-            // Multiply each value at position i of the ID list with
-            // the corresponding value at the same position in the predefined value list
-            const c1 = x[i] * values[i];
-            s += c1;
-        }
-
-        // Calculation of the verification digit
-        const rest = s % 10;
-        let dv = rest === 0 ? 0 : 10 - rest;
-        return dv;
-    } else {
-        dv = -1;
-        return dv;
+function calculateVerifyingDigit(id) {
+    // Convert string to array of numbers
+    const x = Array.from(id, Number);
+    // Calculate verifying digit
+    let s = 0;
+    const values = [2, 9, 8, 7, 6, 3, 4]; // Weights
+    for (let i = 0; i < 7; i++) {
+        s += x[i] * values[i];
     }
+    const rest = s % 10;
+    return rest === 0 ? 0 : 10 - rest;
 }
 
-function isValid(veryfingDigit) {
-    return veryfingDigit > -1;
+function isValid(digit) {
+    return digit >= 0 && digit <= 9;
+}
+
+function isValidFormatId(id) {
+    return /^\d{1}\.\d{3}\.\d{3}-\d{1}$/.test(id);
+}
+
+function isValidId(id) {
+    if (isValidFormat(id)) {
+        const idWithoutFormatting = id.replace(/\.|-/g, "");
+        const idWithoutVerifier = idWithoutFormatting.slice(0, -1);
+        const verifyingDigit = calculateVerifyingDigit(idWithoutVerifier);
+        const actualVerifier = parseInt(idWithoutFormatting.charAt(7));
+        return verifyingDigit === actualVerifier;
+    }
+    return false;
 }
