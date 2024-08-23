@@ -45,6 +45,7 @@ const validations = {
 
     },
     rut: (value) => {
+        if (!isValidFormat(value)) return 'El formato del RUT no es válido';
         return isValidRut(value) ? '' : 'El RUT no es válido';
     }
 };
