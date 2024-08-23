@@ -40,12 +40,8 @@ const validations = {
         return value === password ? '' : 'Las contraseñas no coinciden';
     },
     cedula: (value) => {
-        // Si no es un número, no es válido
-        if (isNaN(value)) return 'La cédula debe contener solo números';
-        // Si no cumple el formato, no es válido
-        if (isValidFormatId(value)) return 'La cédula debe tener el formato 1.234.567-8';
         // Si no es válida, no es válido
-        return isValid(value) ? '' : 'La cédula no es válida';
+        return isValidId(value) ? '' : 'La cédula no es válida';
 
     },
     rut: (value) => {
