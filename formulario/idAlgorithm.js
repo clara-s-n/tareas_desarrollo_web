@@ -1,18 +1,27 @@
-function calculateVerifyingDigit(id) {
-    // Asegúrate de que id sea una cadena
-    id = String(id);
 
-    // Convierte la cadena a un array de números
-    const x = id.split('').map(Number);
-    let s = 0;
-    const values = [2, 9, 8, 7, 6, 3, 4]; // Ajustado a 7 valores
+function getVerifyingDigit(id) {
+    // Eliminar puntos y guiones
+    id = id.replace(/\.|-/g, "");
 
-    for (let i = 0; i < 7; i++) {
-        s += x[i] * values[i];
+    // Verificar que tenga 8 dígitos
+    if (id.length !== 8) {
+        return false;
     }
 
-    const rest = s % 11;
-    return rest === 0 ? 0 : 11 - rest;
+    // Coeficientes para el cálculo del dígito verificador
+    const coeficientes = [2, 9, 8, 7, 6, 3, 4];
+    let suma = 0;
+
+    // Calcular la suma de los productos de los coeficientes
+
+    for (let i = 0; i < 7; i++) {
+        suma += parseInt(id.charAt(i)) * coeficientes[i];
+    }
+  
+    // Calcular el dígito verificador
+    const digitoVerificador = (10 - (suma % 10)) % 10;
+
+    return digitoVerificador;
 }
 
 function isValidFormatId(id) {
@@ -22,15 +31,10 @@ function isValidFormatId(id) {
 function isValidId(id) {
     console.log("Cédula ingresada:", id);
     if (isValidFormatId(id)) {
-        console.log("Formato válido");
         const idWithoutFormatting = id.replace(/\.|-/g, "");
-        const idWithoutVerifier = idWithoutFormatting.slice(0, 7);
-        const verifyingDigit = calculateVerifyingDigit(idWithoutVerifier);
-        const actualVerifier = parseInt(idWithoutFormatting.charAt(7));
-        console.log("Dígito calculado:", verifyingDigit);
-        console.log("Dígito actual:", actualVerifier);
+        const verifyingDigit = getVerifyingDigit(id);
+        const actualVerifier = parseInt(idWithoutFormatting.charAt(7)); // The 8th digit
         return verifyingDigit === actualVerifier;
     }
-    console.log("Formato inválido");
     return false;
 }
