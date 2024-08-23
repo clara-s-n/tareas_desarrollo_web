@@ -1,16 +1,26 @@
-function calculateVerifyingDigit(id) {
-    // Convert string to array of numbers
-    const x = Array.from(id, Number);
-    let s = 0;
-    const values = [2, 9, 8, 7, 6, 3, 4]; // Weights
 
-    // Ensure we only use the first 7 digits
-    for (let i = 0; i < 7; i++) {
-        s += x[i] * values[i];
+function getVerifyingDigit(id) {
+    // Eliminar puntos y guiones
+    id = id.replace(/\.|-/g, "");
+
+    // Verificar que tenga 8 dígitos
+    if (id.length !== 8) {
+        return false;
     }
 
-    const rest = s % 10;
-    return rest === 0 ? 0 : 10 - rest;
+    // Coeficientes para el cálculo del dígito verificador
+    const coeficientes = [2, 9, 8, 7, 6, 3, 4];
+    let suma = 0;
+
+    // Calcular la suma de los productos de los coeficientes
+    for (let i = 0; i < 7; i++) {
+        suma += parseInt(id.charAt(i)) * coeficientes[i];
+    }
+
+    // Calcular el dígito verificador
+    const digitoVerificador = (10 - (suma % 10)) % 10;
+
+    return digitoVerificador;
 }
 
 function isValidFormatId(id) {
@@ -19,10 +29,8 @@ function isValidFormatId(id) {
 
 function isValidId(id) {
     if (isValidFormatId(id)) {
-        // Remove formatting characters
         const idWithoutFormatting = id.replace(/\.|-/g, "");
-        const idWithoutVerifier = idWithoutFormatting.slice(0, 7); // First 7 digits
-        const verifyingDigit = calculateVerifyingDigit(idWithoutVerifier);
+        const verifyingDigit = getVerifyingDigit(id);
         const actualVerifier = parseInt(idWithoutFormatting.charAt(7)); // The 8th digit
         return verifyingDigit === actualVerifier;
     }
