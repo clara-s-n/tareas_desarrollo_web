@@ -13,10 +13,11 @@ function getVerifyingDigit(id) {
     let suma = 0;
 
     // Calcular la suma de los productos de los coeficientes
+
     for (let i = 0; i < 7; i++) {
         suma += parseInt(id.charAt(i)) * coeficientes[i];
     }
-
+  
     // Calcular el dígito verificador
     const digitoVerificador = (10 - (suma % 10)) % 10;
 
@@ -28,6 +29,7 @@ function isValidFormatId(id) {
 }
 
 function isValidId(id) {
+    console.log("Cédula ingresada:", id);
     if (isValidFormatId(id)) {
         const idWithoutFormatting = id.replace(/\.|-/g, "");
         const verifyingDigit = getVerifyingDigit(id);
