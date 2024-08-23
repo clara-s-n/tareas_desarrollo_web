@@ -40,11 +40,12 @@ const validations = {
         return value === password ? '' : 'Las contraseñas no coinciden';
     },
     cedula: (value) => {
-        // Si no es válida, no es válido
+        if (!isValidFormatId(value)) return 'El formato de la cédula no es válido';
         return isValidId(value) ? '' : 'La cédula no es válida';
 
     },
     rut: (value) => {
+        if (!isValidFormat(value)) return 'El formato del RUT no es válido';
         return isValidRut(value) ? '' : 'El RUT no es válido';
     }
 };
