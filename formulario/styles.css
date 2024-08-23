@@ -67,5 +67,33 @@ button {
 
 button:hover {
     background-color: #0056b3;
+}
 
+/* Requisitos de la contraseña */
+.requirements {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+}
+
+.requirements ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.requirement {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 5px;
+}
+
+.requirement.valid {
+    color: #28a745;
+    font-size: 0.9em;
+}
+
+.requirement.requirement {
+    color: #dc3545;
 }

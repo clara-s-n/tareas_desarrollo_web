@@ -40,9 +40,7 @@ const validations = {
         return value === password ? '' : 'Las contraseñas no coinciden';
     },
     cedula: (value) => {
-        // Si no es válida, no es válido
         return isValidId(value) ? '' : 'La cédula no es válida';
-
     },
     rut: (value) => {
         return isValidRut(value) ? '' : 'El RUT no es válido';
@@ -63,6 +61,33 @@ function validateField(field) {
     field.classList.toggle('invalid', !!error);
     return !error;
 }
+
+function showPasswordRequirements() {
+    const password = form.password.value;
+
+    const lengthRequirement = document.getElementById('length');
+    lengthRequirement.classList.toggle('valid', password.length >= 8);
+    lengthRequirement.classList.toggle('requirement', password.length < 8);
+
+    const uppercaseRequirement = document.getElementById('uppercase');
+    uppercaseRequirement.classList.toggle('valid', /[A-Z]/.test(password));
+    uppercaseRequirement.classList.toggle('requirement', !/[A-Z]/.test(password));
+
+    const lowercaseRequirement = document.getElementById('lowercase');
+    lowercaseRequirement.classList.toggle('valid', /[a-z]/.test(password));
+    lowercaseRequirement.classList.toggle('requirement', !/[a-z]/.test(password));
+
+    const numberRequirement = document.getElementById('number');
+    numberRequirement.classList.toggle('valid', /[0-9]/.test(password));
+    numberRequirement.classList.toggle('requirement', !/[0-9]/.test(password));
+
+    const specialRequirement = document.getElementById('special');
+    specialRequirement.classList.toggle('valid', /[!@#$%^&*_-]/.test(password));
+    specialRequirement.classList.toggle('requirement', !/[!@#$%^&*_-]/.test(password));
+}
+
+// Evento para validar la contraseña y mostrar requisitos mientras se escribe
+form.password.addEventListener('input', showPasswordRequirements);
 
 registrarBtn.addEventListener('click', function () {
     let isValid = true;
