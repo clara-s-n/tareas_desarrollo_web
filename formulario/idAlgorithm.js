@@ -1,16 +1,18 @@
 function calculateVerifyingDigit(id) {
-    // Convert string to array of numbers
-    const x = Array.from(id, Number);
-    let s = 0;
-    const values = [2, 9, 8, 7, 6, 3, 4]; // Weights
+    // Asegúrate de que id sea una cadena
+    id = String(id);
 
-    // Ensure we only use the first 7 digits
+    // Convierte la cadena a un array de números
+    const x = id.split('').map(Number);
+    let s = 0;
+    const values = [2, 9, 8, 7, 6, 3, 4]; // Ajustado a 7 valores
+
     for (let i = 0; i < 7; i++) {
         s += x[i] * values[i];
     }
 
-    const rest = s % 10;
-    return rest === 0 ? 0 : 10 - rest;
+    const rest = s % 11;
+    return rest === 0 ? 0 : 11 - rest;
 }
 
 function isValidFormatId(id) {
@@ -18,13 +20,17 @@ function isValidFormatId(id) {
 }
 
 function isValidId(id) {
+    console.log("Cédula ingresada:", id);
     if (isValidFormatId(id)) {
-        // Remove formatting characters
+        console.log("Formato válido");
         const idWithoutFormatting = id.replace(/\.|-/g, "");
-        const idWithoutVerifier = idWithoutFormatting.slice(0, 7); // First 7 digits
+        const idWithoutVerifier = idWithoutFormatting.slice(0, 7);
         const verifyingDigit = calculateVerifyingDigit(idWithoutVerifier);
-        const actualVerifier = parseInt(idWithoutFormatting.charAt(7)); // The 8th digit
+        const actualVerifier = parseInt(idWithoutFormatting.charAt(7));
+        console.log("Dígito calculado:", verifyingDigit);
+        console.log("Dígito actual:", actualVerifier);
         return verifyingDigit === actualVerifier;
     }
+    console.log("Formato inválido");
     return false;
 }
